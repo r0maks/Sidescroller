@@ -13,7 +13,7 @@ class Robot {
         p.fill(this.color);
         p.stroke(this.color);
 
-        // legs
+        // legs l,r
         p.rect(this.position.x, this.position.y, 40, 100);
         p.rect(this.position.x + Robot.GAP, this.position.y, 40, 100);
 
@@ -22,5 +22,9 @@ class Robot {
 
         // head
         p.rect(this.position.x + (Robot.GAP / 2), this.position.y - (Robot.GAP * 3), 40, 40);
+    }
+
+    walkRight(): void {
+        this.position.x = this.position.x + 20;
     }
 }

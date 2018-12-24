@@ -14,6 +14,10 @@ var sketch = (p: p5) => {
     p.windowResized = () => {
         p.resizeCanvas(p.windowWidth, p.windowHeight);
     }
+
+    p.mouseClicked = () => {
+        robot.walkRight();
+    }
     
     p.draw = () => {
         p.background(100);
